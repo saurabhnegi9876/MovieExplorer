@@ -28,16 +28,16 @@ export default function MovieDetials() {
   } = useFavoriteStore();
 
   // ID milne ke baad movie details fetch karenge
-  useEffect(() => {
+useEffect(() => {
+  async function getMovieDetails() {
     if (!id) return;
 
-    async function getMovieDetails() {
-      const data = await fetchMovieDetails(Number(id));
-      setMovie(data);
-    }
+    const data = await fetchMovieDetails(id);
+    setMovie(data);
+  }
 
-    getMovieDetails();
-  }, [id]);
+  getMovieDetails();
+}, [id]);
 
   // Jab tak API se data nahi aata
   if (!movie) {
