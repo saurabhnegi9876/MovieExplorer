@@ -15,7 +15,7 @@ type MovieDetailsProps = {
 
 export default function MovieDetials() {
   // URL se movie ID niklegi
-  const { id } = useParams();
+const { id } = useParams<{ id: string }>();
 
   // Movie details store karne ke liye
   const [movie, setMovie] = useState<MovieDetailsProps | null>(null);
