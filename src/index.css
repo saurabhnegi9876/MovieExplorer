@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* =================================
+   Movie Explorer Theme
+================================= */
+
+:root {
+  /* Light Theme */
+
+  --color-background: rgb(24, 24, 27);
+  --color-navbar: rgb(255, 255, 255);
+  --color-card: #FFFFFF;
+
+  --color-primary-text: white;
+  --color-secondary-text: #71717A;
+
+  --color-border: #E4E4E7;
+
+  --color-accent: #7C3AED;
+  --color-hover-accent: #6D28D9;
+
+  --color-favorite: #E11D48;
+}
+
+/* =================================
+   Dark Theme
+================================= */
+
+.dark {
+  --color-background: #09090B;
+  --color-navbar: rgb(24, 24, 27);
+  --color-card: rgb(24, 24, 27);
+
+  --color-primary-text: #FAFAFA;
+  --color-secondary-text: #A1A1AA;
+
+  --color-border: #27272A;
+
+  --color-accent: #8B5CF6;
+  --color-hover-accent: #A78BFA;
+
+  --color-favorite: #F43F5E;
+}
+
+/* =================================
+   Tailwind Theme Tokens
+================================= */
+
+@theme {
+  --color-background: var(--color-background);
+  --color-navbar: var(--color-navbar);
+  --color-card: var(--color-card);
+
+  --color-primary-text: var(--color-primary-text);
+  --color-secondary-text: var(--color-secondary-text);
+
+  --color-border: var(--color-border);
+
+  --color-accent: var(--color-accent);
+  --color-hover-accent: var(--color-hover-accent);
+
+  --color-favorite: var(--color-favorite);
+}
+
+/* =================================
+   Global Styles
+================================= */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--color-background);
+  color: var(--color-primary-text);
+
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+}
