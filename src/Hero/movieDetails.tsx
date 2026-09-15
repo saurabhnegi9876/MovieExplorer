@@ -32,7 +32,7 @@ export default function MovieDetials() {
     if (!id) return;
 
     async function getMovieDetails() {
-      const data = await fetchMovieDetails(id);
+      const data = await fetchMovieDetails(Number(id));
       setMovie(data);
     }
 
